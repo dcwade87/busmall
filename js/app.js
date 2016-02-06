@@ -1,4 +1,4 @@
-var imgName = ["Bag", "Banana", "Boots", "Chair", "Cthulu", "Dragon", "Pen", "Scissors", "Shark", "Sweep", "Unicorn", "USB", "Water Can", "Wine Glass"]
+var imgName = ["Bag", "Banana", "Boots", "Chair", "Cthulhu", "Dragon", "Pen", "Scissors", "Shark", "Sweep", "Unicorn", "USB", "Water_Can", "Wine_Glass"]
 var imgArr = []
 var voteRounds = 0
 
@@ -17,11 +17,11 @@ function generatePic() {
 generatePic();
 
 randomNumber = function() {
-  return Math.floor((Math.random() * (15 - 1) + 1));
+  return Math.floor(Math.random() * imgName.length);
 }
 
 var img = document.createElement("img");
-img.src = imgArr[6].path;
+img.src = imgArr[randomNumber()].path;
 
 var src = document.getElementById("vote1");
 src.appendChild(img);
